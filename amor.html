@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi enfermera favorita</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #38bdf8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #1e293b;
+            border-radius: 20px;
+            background: rgba(30, 41, 59, 0.5);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            max-width: 90%;
+        }
+
+        /* Animación del ECG */
+        .heartbeat-loader {
+            stroke: #f43f5e;
+            stroke-width: 3;
+            fill: none;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s linear infinite;
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
+        }
+
+        h1 { font-size: 1.5rem; margin-bottom: 10px; color: #f1f5f9; }
+        p { font-size: 1.1rem; line-height: 1.5; color: #94a3b8; }
+
+        .status-badge {
+            background: #10b981;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .message-box {
+            margin-top: 20px;
+            font-style: italic;
+            border-left: 4px solid #f43f5e;
+            padding-left: 15px;
+            text-align: left;
+        }
+
+        .heart { color: #f43f5e; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="status-badge">Estado: Eres Increíble</div>
+        
+        <h1>Reporte de Signos Vitales</h1>
+
+        <svg class="heartbeat-loader" viewBox="0 0 150 73">
+            <polyline points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486" />
+        </svg>
+
+        <p>Tu capacidad no se mide por una hoja de respuestas, sino por el corazón que pones en cada paciente.</p>
+        
+        <div class="message-box">
+            <p>"Pase lo que pase hoy, mi diagnóstico es que ya eres la mejor enfermera del mundo. <span class="heart">♥</span>"</p>
+        </div>
+    </div>
+
+</body>
+</html>
